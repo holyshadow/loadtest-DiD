@@ -1,7 +1,14 @@
-# loadtest-DiD
+# Loadtest Server
 
-Start MongoDB beforn start server
+RESTful server for loadtest Digital-ID
+
+## Start MongoDB beforn start server
+```
 mongod --dbpath data/db/
+```
 
-Start Rest Server 
+## Start Rest Server
+
+```
 npm run start
+...
