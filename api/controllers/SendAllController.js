@@ -20,7 +20,8 @@ exports.list_all_req = function(req, res) {
 exports.create_a_task = function(req, res) {
   req.body["seq"] = req.params.seqId;
   var new_task = new Message(req.body);
-  
+  var current = new Date().toISOString();
+  console.log(req.body["seq"] + " " + current);
   new_task.save(function(err, send_all) {
     if (err)
       res.send(err);

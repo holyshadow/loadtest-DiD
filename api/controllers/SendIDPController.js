@@ -19,7 +19,8 @@ exports.create_a_task = function(req, res) {
   req.body["seq"] = req.params.seqId;
   var new_task = new Message(req.body);
   
-  console.log(req.body);
+  var current = new Date().toISOString();
+  console.log(req.body["seq"] + " " + current);
   new_task.save(function(err, sendIDP) {
     if (err)
       res.send(err);

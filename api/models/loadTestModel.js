@@ -11,7 +11,7 @@ var AllMsgSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  payload: {
+  message: {
       type: String
   }
 });
@@ -24,7 +24,7 @@ var IDPMsgSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  payload: {
+  message: {
       type: String
   }
 });
